@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [];
+        var rollno=0;
+        function addrow(){
+            var name = document.getElementById("n").value;
+            var phy = document.getElementById("p").value;
+            var chem = document.getElementById("c").value;
+            var math = document.getElementById("m").value;
+            var rollno = arr.length + 100;
+            arr.push({
+                rollno:`${rollno}`,
+                name:`${name}`,
+                phy:`${phy}`,
+                chem:`${chem}`,
+                math:`${math}`,    
+            })  
+            var s = `<table border=1>
+                <tr><td>Roll Number</td>
+                    <td>Name</td>
+                    <td>phy</td>
+                    <td>chem</td>
+                    <td>math</td><tr>`
+            arr.forEach(data=>{
+                s = s+`<tr><td>${data.rollno}</td>
+                    <td>${data.name}</td>
+                    <td>${data.phy}</td>
+                    <td>${data.chem}</td>
+                    <td>${data.math}</td><tr>`
+            })
+            s=s+`</table>`
+            document.getElementById('out').innerHTML = s;
+        }
+        
+      
+           
+    </script>
+</head>
+<body>
+    <center>
+        <table>
+            
+            <tr>
+                <td>Enter Name</td>
+                <td><input type="text" name="n" id="n"></td>
+            </tr>
+            
+            <tr>
+                <td>Enter Phy</td>
+                <td><input type="text" name="p" id="p"></td>
+            </tr>
+
+            <tr>
+                <td>Enter chem</td>
+                <td><input type="text" name="c" id="c"></td>
+            </tr>
+
+            <tr>
+                <td>Enter Maths</td>
+                <td><input type="text" name="m" id="m"></td>
+            </tr>
+            <tr>
+                <td>Submit</td>
+                <td><input type="submit"  onclick="addrow()"></td>
+            </tr>
+        </table>
+        <div id="out">
+         
+        </div>
+    </center>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<head>
+  <title>Document</title>
+  <style>
+      table {
+          text-align: center;
+      }
+
+      #myUL {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      #myUL li{
+          border: 1px solid #ddd;
+          margin-top: -1px;
+          background-color: #f6f6f6;
+          padding: 12px;
+          text-decoration: none;
+          font-size: 18px;
+          color: black;
+          display: block;
+      }
+  </style>
+    <script>
+      function recomend() {
+          console.clear();
+          var input, filter, ul, list,li1, a, i, txtValue;
+          list = ['APL', 'AutoIt', 'BASIC', 'Eiffel', 'Forth', 'Frink', 'Game Maker Language', 'ICI', 'J', 'Lisp', 'Lua', 'M', 'Pascal', 'PCASTL', 'Perl', 'PostScript', 'Python', 'REXX', 'Ruby', 'S-Lang', 'Spin', 'Charity', 'Clean', 'Curry', 'Erlang', 'F#', 'Haskell', 'Joy', 'Kite', 'ML', 'Nemerle', 'OPAL', 'OPS5', 'Q', 'Ada', 'ALGOL', 'C', 'C++', 'C#', 'CLEO', 'COBOL', 'Cobra', 'D', 'DASL', 'DIBOL', 'Fortran', 'Java', 'JOVIAL', 'Objective-C', 'SMALL', 'Smalltalk', 'Turing', 'Visual Basic', 'Visual FoxPro', 'XL', 'Bliss', 'ChucK', 'CLIST', 'HyperTalk', 'Modula-2', 'Oberon', 'Component Pascal', 'MATLAB', 'Occam', 'PL/C', 'PL/I', 'Rapira', 'RPG', 'AppleScript', 'Awk', 'BeanShell', 'ColdFusion', 'F-Script', 'JASS', 'Maya Embedded Language', 'Mondrian', 'PHP', 'Revolution', 'Tcl', 'VBScript', 'Windows PowerShell', 'Curl', 'SGML', 'HTML', 'XML', 'XHTML', 'ALF', 'Fril', 'Janus', 'Leda', 'Oz', 'Poplog', 'Prolog', 'ROOP', 'ABCL', 'Afnix', 'Cilk', 'Concurrent Pascal', 'E', 'Joule', 'Limbo', 'Pict', 'SALSA', 'SR', 'Agora', 'BETA', 'Cecil', 'Lava', 'Lisaac', 'MOO', 'Moto', 'Object-Z', 'Obliq', 'Oxygene', 'Pliant', 'Prograph', 'REBOL', 'Scala', 'Self', 'Slate', 'XOTcl', 'IO'];
+          input = document.getElementById("search");
+          console.log(input.value);
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          ul.innerHTML = "";
+          for (i = 0; i < list.length; i++) {
+              a = list[i];
+              txtValue = a;
+              var li = document.createElement("li");
+              if (txtValue.toUpperCase().search(filter) > -1) {
+                ul.appendChild(li);
+                li.innerHTML = list[i];
+                
+              }
+          }
+          if(input.value==""){
+                console.log("if run");
+                ul.innerHTML = "";
+              }
+          
+      }
+  </script>
+
+</head>
+
+<body>
+  <center>
+      <table cellspacing="10" cellpadding="10s">
+          <tr>
+              <td colspan="3">
+                  Search AnyThing
+              </td>
+          </tr>
+          <tr>
+              <td><input type="text" name="search" onkeyup="recomend()" id="search">
+              </td>
+              <td><input type="button" value="search"></td>
+          </tr>
+      </table>
+      <ul id="myUL">
+          <li></li>
+      </ul>
+  </center>
+
+</body>
+
+</html>

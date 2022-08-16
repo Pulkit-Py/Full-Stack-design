@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <script>
+            function add(){
+                var first = parseInt(document.getElementById("f").value);
+                var Second = parseInt(document.getElementById("s").value);
+                var Result = first+Second;
+                document.getElementById("r").value = Result;
+
+            }
+            function sub(){
+                var first = parseInt(document.getElementById("f").value);
+                var Second = parseInt(document.getElementById("s").value);
+                var Result = first-Second;
+                document.getElementById("r").value = Result;
+
+            }
+            function mul(){
+                var first = parseInt(document.getElementById("f").value);
+                var Second = parseInt(document.getElementById("s").value);
+                var Result = first*Second;
+                document.getElementById("r").value = Result;
+
+            }
+            function div(){
+                var first = parseInt(document.getElementById("f").value);
+                var Second = parseInt(document.getElementById("s").value);
+                var Result = first/Second;
+                document.getElementById("r").value = Result;
+
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <table border="1" cellspacing="10" cellpadding="10">
+            <tr>
+                <td>
+                    Enter First Number:
+                </td>
+
+                <td>
+                    <input type="text" name="First" id="f">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Second Number:
+                </td>
+
+                <td>
+                    <input type="text" name="Second" id="s">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Result:
+                </td>
+
+                <td>
+                    <input type="text" name="Result" id="r">
+                </td>
+            </tr>
+        </table>
+        <br><br>&emsp;
+                <input type="button" value="Add" onclick="add()">&emsp;&emsp;&emsp;&emsp;
+                <input type="button" value="Sub" onclick="sub()">&emsp;&emsp;&emsp;&emsp;
+                <input type="button" value="Mult" onclick="mul()">&emsp;&emsp;&emsp;&emsp;
+                <input type="button" value="Div" onclick="div()">&emsp;&emsp;&emsp;&emsp;
+            </center>
+    </body>
+</html>

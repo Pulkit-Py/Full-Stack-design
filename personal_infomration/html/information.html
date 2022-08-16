@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>var username, password, name_, gmail, phone, address, high_school_, intermediate, ug, pg;
+    function information() {
+        username = document.getElementById("username").value;
+        password = document.getElementById("password").value;
+        var s = `<center><h1>Personal Information Page</h1><table cellspacing="10" cellpadding="10">`;
+        s = s + `<tr>  <td>Enter Name:</td><td><input type="text" name="name" id="name"></td></tr>`;
+        s = s + `<tr><td> Enter Gmail:</td><td><input type="text" name="gmail" id="gmail"></td></tr>`;
+        s = s + `<tr><td> Enter Phone:</td><td><input type="text" name="phone" id="phone"></td></tr>`;
+        s = s + `<tr><td> Enter Address:</td><td><input type="text" name="phone" id="address"></td></tr>`;
+        s = s + `<tr><td colspan="2"><center><input type="button" value="next" onclick="personal_info()"></center></td></tr>`;
+        s = s + `</table></center>`;
+        document.getElementById("demo").innerHTML = s;
+    }
+    function personal_info() {
+        name_ = document.getElementById("name").value;
+        gmail = document.getElementById("gmail").value;
+        phone = document.getElementById("phone").value;
+        address = document.getElementById("address").value;
+        var s = `
+<center>
+    <h1>User Information Pafge</h1>
+    <table cellspacing="10" cellpadding="10">
+        <tr>
+            <td>
+                Enter 10th: 
+            </td>
+
+            <td>
+                <input type="text" name="high_school" id="high_school"> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter 12th: 
+            </td>
+
+            <td>
+                <input type="text" name="intermediate" id="intermediate"> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter UG: 
+            </td>
+
+            <td>
+                <input type="text" name="UG" id="UG"> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter PG: 
+            </td>
+
+            <td>
+                <input type="text" name="PG" id="PG"> 
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center><input type="button" onclick = "high_school()"value="Submit"></center>
+            </td>
+        </tr>
+    </table>
+</center> `;
+        document.getElementById("demo").innerHTML = s;
+    }
+    function high_school() {
+        high_school_ = document.getElementById("high_school").value;
+        intermediate = document.getElementById("intermediate").value;
+        ug = document.getElementById("UG").value;
+        pg = document.getElementById("PG").value;
+        s = `
+        <center>
+            <h1>Show</h1>
+            <table cellspacing="10" cellpadding="10" border="1">
+                <tr><td>Username</td><td>${username}</td></tr>
+                <tr><td>password</td><td>${password}</td></tr>
+                <tr><td>name</td><td>${name_}</td></tr>
+                <tr><td>gmail</td><td>${gmail}</td></tr>
+                <tr><td>phone</td><td>${phone}</td></tr>
+                <tr><td>address</td><td>${address}</td></tr>
+                <tr><td>highschool</td><td>${high_school_}</td></tr>
+                <tr><td>intermediate</td><td>${intermediate}</td></tr>
+                <tr><td>ug</td><td>${ug}</td></tr>
+                <tr><td>pg</td><td>${pg}</td></tr>
+                
+            </tabe>
+        </center>
+        `;
+        document.getElementById("demo").innerHTML = s;
+    }
+</script>
+<style>
+    input {
+        width: 100%;
+    }
+
+    table {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="demo">
+        <center>
+            <h1>User Information Pafge</h1>
+            <table cellspacing="10" cellpadding="10">
+                <tr>
+                    <td>
+                        Enter User Name:
+                    </td>
+
+                    <td>
+                        <input type="text" name="username" id="username">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Enter password:
+                    </td>
+
+                    <td>
+                        <input type="password" name="password" id="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <center><input type="button" value="next" onclick="information()"></center>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+</body>
+
+</html>

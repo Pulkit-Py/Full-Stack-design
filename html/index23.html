@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [
+            {"id":100,"name":"A","Course":"MCA"},
+            {"id":101,"name":"B","Course":"MCA"},
+            {"id":102,"name":"C","Course":"MCA"},
+            {"id":103,"name":"D","Course":"MCA"},
+            {"id":104,"name":"E","Course":"MCA"}
+        ];
+        function addData(argu){
+            setTimeout(() => {
+                var data ={"id":105,"name":"F","Course":"MCA"}
+                arr.push(data)
+                console.log("Run in setTimeour")
+                argu();
+            }, 2000);
+        }
+        function showData(){
+            arr.forEach(data=>{
+                document.write(`<br>${data.id} ${data.name} ${data.Course}`)
+            })
+        }
+        addData(showData);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

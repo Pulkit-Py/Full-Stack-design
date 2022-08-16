@@ -1,0 +1,206 @@
+<head>
+    <title>Document</title>
+    <style>
+        table {
+            text-align: center;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myUL li{
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: none;
+        }
+    </style>
+ <script>
+    function recomend() {
+        console.clear();
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "Block";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+</head>
+
+<body>
+    <center>
+        <table cellspacing="10" cellpadding="10s">
+            <tr>
+                <td colspan="3">
+                    Search AnyThing
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="search" onkeyup="recomend()" id="search">
+                </td>
+                <td><input type="button" value="search"></td>
+            </tr>
+        </table>
+        <ul id="myUL">
+            <li>APL</li>
+            <li>AutoIt</li>
+            <li>BASIC</li>
+            <li>Eiffel</li>
+            <li>Forth</li>
+            <li>Frink</li>
+            <li>Game Maker Language</li>
+            <li>ICI</li>
+            <li>J</li>
+            <li>Lisp</li>
+            <li>Lua</li>
+            <li>M</li>
+            <li>Pascal</li>
+            <li>PCASTL</li>
+            <li>Perl</li>
+            <li>PostScript</li>
+            <li>Python</li>  <script>
+                function recomend() {
+                    console.clear();
+                    var input, filter, ul, li, a, i, txtValue;
+                    input = document.getElementById("search");
+                    filter = input.value.toUpperCase();
+                    ul = document.getElementById("myUL");
+                    li = ul.getElementsByTagName("li");
+                    for (i = 0; i < li.length; i++) {
+                        a = li[i];
+                        txtValue = a.textContent || a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "Block";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+            </script>
+            <li>REXX</li>
+            <li>Ruby</li>
+            <li>S-Lang</li>
+            <li>Spin</li>
+            <li>Charity</li>
+            <li>Clean</li>
+            <li>Curry</li>
+            <li>Erlang</li>
+            <li>F#</li>
+            <li>Haskell</li>
+            <li>Joy</li>
+            <li>Kite</li>
+            <li>ML</li>
+            <li>Nemerle</li>
+            <li>OPAL</li>
+            <li>OPS5</li>
+            <li>Q</li>
+            <li>Ada</li>
+            <li>ALGOL</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>C#</li>
+            <li>CLEO</li>
+            <li>COBOL</li>
+            <li>Cobra</li>
+            <li>D</li>
+            <li>DASL</li>
+            <li>DIBOL</li>
+            <li>Fortran</li>
+            <li>Java</li>
+            <li>JOVIAL</li>
+            <li>Objective-C</li>
+            <li>SMALL</li>
+            <li>Smalltalk</li>
+            <li>Turing</li>
+            <li>Visual Basic</li>
+            <li>Visual FoxPro</li>
+            <li>XL</li>
+            <li>Bliss</li>
+            <li>ChucK</li>
+            <li>CLIST</li>
+            <li>HyperTalk</li>
+            <li>Modula-2</li>
+            <li>Oberon</li>
+            <li>Component Pascal</li>
+            <li>MATLAB</li>
+            <li>Occam</li>
+            <li>PL/C</li>
+            <li>PL/I</li>
+            <li>Rapira</li>
+            <li>RPG</li>
+            <li>AppleScript</li>
+            <li>Awk</li>
+            <li>BeanShell</li>
+            <li>ColdFusion</li>
+            <li>F-Script</li>
+            <li>JASS</li>
+            <li>Maya Embedded Language</li>
+            <li>Mondrian</li>
+            <li>PHP</li>
+            <li>Revolution</li>
+            <li>Tcl</li>
+            <li>VBScript</li>
+            <li>Windows PowerShell</li>
+            <li>Curl</li>
+            <li>SGML</li>
+            <li>HTML</li>
+            <li>XML</li>
+            <li>XHTML</li>
+            <li>ALF</li>
+            <li>Fril</li>
+            <li>Janus</li>
+            <li>Leda</li>
+            <li>Oz</li>
+            <li>Poplog</li>
+            <li>Prolog</li>
+            <li>ROOP</li>
+            <li>ABCL</li>
+            <li>Afnix</li>
+            <li>Cilk</li>
+            <li>Concurrent Pascal</li>
+            <li>E</li>
+            <li>Joule</li>
+            <li>Limbo</li>
+            <li>Pict</li>
+            <li>SALSA</li>
+            <li>SR</li>
+            <li>Agora</li>
+            <li>BETA</li>
+            <li>Cecil</li>
+            <li>Lava</li>
+            <li>Lisaac</li>
+            <li>MOO</li>
+            <li>Moto</li>
+            <li>Object-Z</li>
+            <li>Obliq</li>
+            <li>Oxygene</li>
+            <li>Pliant</li>
+            <li>Prograph</li>
+            <li>REBOL</li>
+            <li>Scala</li>
+            <li>Self</li>
+            <li>Slate</li>
+            <li>XOTcl</li>
+            <li>IO</li>
+        </ul>
+    </center>
+   
+</body>
+
+</html>

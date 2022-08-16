@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validum(){
+            var reg = /^[a-zA-Z]+$/
+            var a = document.getElementById("u").value;
+            if (a==""){
+                document.getElementById("eu").innerHTML = "Username is mandotry";
+                document.getElementById("u").style.border = "2px solid red"
+            }
+            else{
+                if(!reg.test(a)){
+                document.getElementById("eu").innerHTML = "Enter valid Username";
+                document.getElementById("u").style.border = "2px solid Red";
+                }
+                else{
+                document.getElementById("eu").innerHTML = "";
+                document.getElementById("u").style.border = "2px solid green";}
+            }
+        }
+        function validp(){
+            var a = document.getElementById("p").value;
+            if (a==""){
+                document.getElementById("ep").innerHTML = "password is mandotry";
+                document.getElementById("p").style.border = "2px solid red"
+            }
+            else{
+                document.getElementById("ep").innerHTML = "";
+                document.getElementById("p").style.border = "2px solid green";
+            }
+        }
+        function validem(){
+            var reg = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,3}+$/;
+            var a = document.getElementById("em").value;
+            if (a==""){
+                document.getElementById("eem").innerHTML = "email is mandotry";
+                document.getElementById("em").style.border = "2px solid red"
+            }
+            else{
+                if(!reg.test(a)){
+                document.getElementById("eem").innerHTML = "Enter Valid Email";
+                document.getElementById("em").style.border = "2px solid red";
+            
+            }
+                else{
+                document.getElementById("eem").innerHTML = "";
+                document.getElementById("em").style.border = "2px solid green";
+                }
+            }
+        }
+        function validph(){
+            var a = document.getElementById("ph").value;
+            if (a==""){
+                document.getElementById("eph").innerHTML = "Phone number is mandotry";
+                document.getElementById("ph").style.border = "2px solid red"
+            }
+            else{
+                document.getElementById("ph").innerHTML = "";
+                document.getElementById("ph").style.border = "2px solid green";
+            }
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <form>
+        <table>
+            <tr>
+                <td>Enter User name</td>
+                <td><input type="text" name="u" id="u" onblur="validum()"></td>
+                <td id="eu" style="color: red;"></td>
+            </tr>
+            <tr>
+                <td>Enter Passwrod</td>
+                <td><input type="text" name="p" id="p" onblur="validp()"></td>
+                <td id="ep" style="color: red;"></td>
+            </tr>
+            <tr>
+                <td>Enter email</td>
+                <td><input type="text" name="em" id="em" onblur="validem()"></td>
+                <td  id="eem" style="color: red;"></td>
+            </tr>
+            <tr>
+                <td>Enter phone</td>
+                <td><input type="text" name="ph" id="ph" onblur="validph()"></td>
+                <td id="eph" style="color: red;"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="submit"></td>
+            </tr>
+
+        </table>
+    </form>
+
+    </center>
+    
+</body>
+</html>

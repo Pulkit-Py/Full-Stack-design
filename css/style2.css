@@ -1,0 +1,57 @@
+body{
+    background-color: aqua;
+    margin: 0px;
+}
+.container{
+    background-color: blanchedalmond;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+.head{
+    background-color:blue;
+    width: 20%;
+    height: 20%;
+    position:absolute;
+}
+.head2{
+    background-color:forestgreen;
+    width: 60%;
+    height: 20%;
+    position:absolute;
+    margin-left: 20%;
+}
+.head3{
+    background-color:goldenrod;
+    width: 20%;
+    height: 20%;
+    position:absolute;
+    margin-left: 80%;
+}
+.right{
+    background-color: darkgray;
+    width: 20%;
+    height: 80%;
+    margin-top: 9.7%;
+    position:absolute;
+
+}
+
+.left{
+    background-color:dodgerblue;
+    width: 20%;
+    height: 80%;
+    margin-left: 80%;
+    margin-top: 9.7%;
+    position:absolute;
+}
+
+.data{
+    background-color:darkviolet;
+    width: 60%;
+    height: 80%;
+    margin-top: 9.7%;
+    margin-left: 20%;
+    position:absolute;
+}

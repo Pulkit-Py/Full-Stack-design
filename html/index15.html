@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        var arr = ["../image/11.jpg","../image/12.jpg","../image/13.jpg","../image/14.jpg","../image/15.jpg","../image/16.jpg"];
+        var x = 0;
+        function nxt(){
+            if(x<arr.length-1){
+                x++;
+                
+            }
+            else{
+                x=0;
+            }
+            document.getElementById("img").src=arr[x];
+        }
+    </script>
+</head>
+<body>
+    <img src="../image/11.jpg" width="200px" height="200px" id="img" onclick="nxt()">
+</body>
+</html>

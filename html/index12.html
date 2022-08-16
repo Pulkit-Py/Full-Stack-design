@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <script>
+            function result(){
+                var roll = document.getElementById("Roll").value;
+                var name = document.getElementById("name").value;
+                var phy = parseInt(document.getElementById("phy").value);
+                var chem = parseInt(document.getElementById("chem").value);
+                var maths = parseInt(document.getElementById("math").value);
+                var Total = phy + chem + maths;
+                var per = Total/3;
+                var res = 0;
+                if(per>="33"){
+                    res = "Pass";
+                }
+                else{
+                    res="Fail";
+                }
+                var table = document.getElementById("mytable");
+                var row = table.insertRow();
+                var c1 = row.insertCell();
+                var c2 = row.insertCell();
+                var c3 = row.insertCell();
+                var c4 = row.insertCell();
+                var c5 = row.insertCell();
+                var c6 = row.insertCell();
+                var c7 = row.insertCell();
+                var c8 = row.insertCell();
+                c1.innerHTML = name;
+                c2.innerHTML = roll;
+                c3.innerHTML = phy;
+                c4.innerHTML = maths;
+                c5.innerHTML = chem;
+                c6.innerHTML = Total;
+                c7.innerHTML = per;
+                c8.innerHTML = res;
+                document.getElementById("Roll").value =  "";
+                document.getElementById("name").value =  "";
+                document.getElementById("phy").value =  "";
+                document.getElementById("chem").value =  "";
+                document.getElementById("math").value =  "";
+
+
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <table cellspacing="5" cellpadding="5">
+            <tr>
+                <td>
+                    Enter Roll Number:
+                </td>
+                <td>
+                    <input type="text" name="First" id="Roll">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Name:
+                </td>
+                <td>
+                    <input type="text" name="Second" id="name">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Enter Phy
+                </td>
+                <td>
+                    <input type="text" name="Result" id="phy">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter chem
+                </td>
+                <td>
+                    <input type="text" name="Result" id="chem">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Maths
+                </td>
+                <td>
+                    <input type="text" name="Result" id="math">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Result" onclick="result()">
+                </td>
+            </tr>
+        </table>
+        <table border="1" cellspacing="10" cellpadding="10" id="mytable">
+            <tr>
+                <td>
+                    Name
+                </td>
+
+                <td>
+                    Roll Number
+                </td>
+
+                <td>
+                    Physics 
+                </td>
+
+                <td>
+                    Maths
+                </td>
+
+                <td>
+                    chem
+                </td>
+
+                <td>
+                    Total
+                </td>
+
+                <td>
+                    Per
+                </td>
+
+                <td>
+                    Result
+                </td>
+            </tr>
+        </table>
+            </center>
+    </body>
+</html>

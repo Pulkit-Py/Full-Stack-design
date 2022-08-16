@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        var data = "";
+        var opr = "";
+        function inputdata(s){
+            document.getElementById("i").value += s;
+        }
+        function calculate(o){
+            data = parseInt(document.getElementById("i").value);
+            opr = o;
+            document.getElementById("i").value = "";
+        }
+        function clr(){
+            document.getElementById("i").value = "";
+        }
+        function total(){
+            var data1 = parseInt(document.getElementById("i").value);
+            var data2 = parseInt(data)
+            var s = opr;
+            var total = "";
+            if(s=="+"){
+                total = data2 + data1;
+            }
+            if(s=="-"){
+                total = data2 - data1;
+            }
+            if(s=="*"){
+                total = data2 * data1;
+            }
+            if(s=="/"){
+                total = data2 / data1;
+            }
+            document.getElementById("i").value = total;
+
+        }
+    </script>
+    <style>
+        input{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <table  cellspacing="15" cellpadding="5">
+            <tr>
+                <td colspan="3">
+                    <input type="text" name="value" placeholder="Input Equation" id="i">
+                </td>
+                <td>
+                    <input type="button" value="clr" onclick="clr()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="1" onclick="inputdata('1')">
+                </td>
+
+                <td>
+                    <input type="button" value="2" onclick="inputdata('2')">
+                </td>
+
+                <td>
+                    <input type="button" value="3" onclick="inputdata('3')">
+                </td>
+
+                <td>
+                    <input type="button" value="+" onclick="calculate('+')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="4" onclick="inputdata('4')">
+                </td>
+
+                <td>
+                    <input type="button" value="5" onclick="inputdata('5')">
+                </td>
+
+                <td>
+                    <input type="button" value="6" onclick="inputdata('6')">
+                </td>
+
+                <td>
+                    <input type="button" value="-" onclick="calculate('-')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="7" onclick="inputdata('7')">
+                </td>
+
+                <td>
+                    <input type="button" value="8" onclick="inputdata('8')">
+                </td>
+
+                <td>
+                    <input type="button" value="9" onclick="inputdata('9')">
+                </td>
+
+                <td>
+                    <input type="button" value="*" onclick="calculate('*')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="." onclick="inputdata('.')">
+                </td>
+
+                <td>
+                    <input type="button" value="0" onclick="inputdata('0')">
+                </td>
+
+                <td>
+                    <input type="button" value="=" onclick="total()">
+                </td>
+
+                <td>
+                    <input type="button" value="/" onclick="calculate('/')">
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

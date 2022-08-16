@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function background(arg){
+            document.getElementById("text_editor").style.background = arg;
+        }
+
+        function text(arg){
+            document.getElementById("text_editor").style.color = arg;
+        }
+
+        function font(arg){
+            document.getElementById("text_editor").style.fontSize = arg;
+        }
+    </script>
+    <style>
+        .text{
+            width: max-content;
+            height: max-content;
+        }
+        .text_area{
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="text">
+    <h1>Text Editor</h1>
+    Select Color For Background:
+    <select onchange="background(this.value)">
+        <option value="red" >red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="orange">orange</option>
+    </select>&emsp;&emsp;&emsp;&emsp;
+    Select Color For Text:
+    <select onchange="text(this.value)">
+        <option value="red" >red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="orange">orange</option>
+    </select>&emsp;&emsp;&emsp;&emsp;
+    Select Font For Text:
+    <select onchange="font(this.value)">
+        <option value="10px">10px</option>
+        <option value="18px">18px</option>
+        <option value="32px">32px</option>
+        <option value="48px">48px</option>
+    </select><br><br>
+    <textarea class="text_area" id="text_editor">
+
+    </textarea>
+    </div>
+    </center>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function getData() {
+            fetch("data.json")
+            .then(res => res.json()
+            .then(data =>
+                data.forEach(row => {
+                    document.write(`${row.id} ${row.name} ${row.Course}<br>`)
+
+                })))
+        }
+        getData();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
